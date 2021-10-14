@@ -28,24 +28,20 @@ public class AuthorService {
 
     public Author getAuthor(final String authorId) {
         Optional<Author> optionalAuthor = authorRepository.findById(authorId);
-
         if(optionalAuthor.isPresent()) {
             return optionalAuthor.get();
         }
-
         throw new EntityNotFoundException("Author Not Found");
     }
 
     public Author updateAuthor(final String authorId, final Author author) {
         Optional<Author> optionalAuthor = authorRepository.findById(authorId);
-        if (!optionalAuthor.isPresent()) {
+        if (optionalAuthor.isEmpty()) {
             throw new EntityNotFoundException("Author Not Found");
         }
-
         Author retrievedAuthor = optionalAuthor.get();
         retrievedAuthor.setFirstName(author.getFirstName());
         retrievedAuthor.setLastName(author.getLastName());
-
         return authorRepository.save(retrievedAuthor);
     }
 

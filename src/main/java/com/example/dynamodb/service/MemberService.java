@@ -34,7 +34,6 @@ public class MemberService {
         if(optionalMember.isPresent()) {
             return optionalMember.get();
         }
-
         throw new EntityNotFoundException("Member Not Found");
     }
     public Member updateMember (Member member) {

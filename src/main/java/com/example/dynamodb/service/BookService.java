@@ -43,13 +43,10 @@ public class BookService {
 
     public Book createBook(Book book) {
         Optional<Author> author = authorRepository.findById(book.getAuthorId());
-        if (!author.isPresent()) {
+        if (author.isEmpty()) {
             throw new EntityNotFoundException("Author Not Found");
         }
-        Book bookToCreate = new Book();
-        BeanUtils.copyProperties(book, bookToCreate);
-        bookToCreate.setAuthorId(author.get().getId());
-        return bookRepository.save(bookToCreate);
+        return bookRepository.save(book);
     }
     public void deleteBook(String id) {
         bookRepository.deleteById(id);
@@ -57,17 +54,17 @@ public class BookService {
 
     public Book updateBook(String bookId, Book request) {
         Optional<Author> author = authorRepository.findById(request.getAuthorId());
-        if (!author.isPresent()) {
+        if (author.isEmpty()) {
             throw new EntityNotFoundException("Author Not Found");
         }
         Optional<Book> optionalBook = bookRepository.findById(bookId);
-        if (!optionalBook.isPresent()) {
+        if (optionalBook.isEmpty()) {
             throw new EntityNotFoundException("Book Not Found");
         }
         Book book = optionalBook.get();
         book.setIsbn(request.getIsbn());
         book.setName(request.getName());
-        book.setAuthorId(author.get().getId());
+        book.setAuthorId(request.getAuthorId());
         return bookRepository.save(book);
     }
 }
