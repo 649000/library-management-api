@@ -1,5 +1,5 @@
-# springboot-aws-dynamodb-poc
-POC for Spring Boot with AWS DynamoDB
+# Spring Boot API with AWS DynamoDB Proof of Concept
+Proof of concept for Spring Boot API with AWS DynamoDB
 
 
 Technologies used:
