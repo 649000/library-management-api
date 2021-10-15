@@ -1,4 +1,4 @@
-# Spring Boot API with AWS DynamoDB Proof of Concept
+# Spring Boot REST API with AWS DynamoDB
 Proof of concept for Spring Boot API with AWS DynamoDB
 
 
