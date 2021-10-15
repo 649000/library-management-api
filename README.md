@@ -10,3 +10,5 @@ Technologies used:
 - AWS Java SDK For Amazon DynamoDB
 - Spring Data DynamoDB
 - Lombok
+- Maven
+- SpringDoc OpenAPI
