@@ -29,4 +29,4 @@ The challenging aspect of this project is having a different approach to databas
 
 #### Tools used
 1. Postman
-2. Intelli IDE
+2. Intellij IDE
