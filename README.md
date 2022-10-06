@@ -27,6 +27,6 @@ NoSQL database has become popular and simpler to use than relational database. T
 The challenging aspect of this project is having a different approach to database design. In relational database, designs have to take into account of relationships with the data and conform to normalisation rules. However, for NoSQL databases, it takes more of an application-centric approach, concerning with how the application will query data. 
 
 
-### Tools used
+#### Tools used
 1. Postman
 2. Intelli IDE
