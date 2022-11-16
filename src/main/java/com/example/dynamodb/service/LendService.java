@@ -50,4 +50,7 @@ public class LendService {
         }
         throw new RuntimeException("Book is not available");
     }
+    public Iterable<Lend> getLends() {
+        return lendRepository.findAll();
+    }
 }
