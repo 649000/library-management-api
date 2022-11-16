@@ -22,12 +22,13 @@ public class MemberController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Member createMember(@RequestBody Member request) {
-        log.info(request.toString());
+        log.debug("Member Object: {}", request.toString());
         return memberService.createMember(request);
     }
 
     @GetMapping("/{memberId}")
     public Member getMember(@PathVariable String memberId) {
+        log.debug("Member ID: {}", memberId);
         return memberService.getMember(memberId);
     }
 
@@ -38,11 +39,14 @@ public class MemberController {
 
     @PatchMapping("/{memberId}")
     public Member updateMember (@PathVariable String memberId, @RequestBody Member request) {
+        log.debug("Member ID: {}", memberId);
+        log.debug("Member Object: {}", request.toString());
         return memberService.updateMember(request);
     }
 
     @DeleteMapping("/{memberId}")
     public void deleteMember (@PathVariable String memberId) {
+        log.debug("Member ID: {}", memberId);
         memberService.deleteMember(memberId);
     }
 }

@@ -26,12 +26,13 @@ public class AuthorController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Author createAuthor (@RequestBody Author request) {
-        log.info(request.toString());
+        log.debug("Author Object: {}", request.toString());
         return authorService.createAuthor(request);
     }
 
     @GetMapping("/{authorId}")
     public Author getAuthor(@PathVariable String authorId) {
+        log.debug("Author ID: {}", authorId);
         return authorService.getAuthor(authorId);
     }
 
@@ -42,11 +43,14 @@ public class AuthorController {
 
     @PatchMapping("/{authorId}")
     public Author updateBook (@PathVariable("authorId") String authorId, @RequestBody Author request) {
+        log.debug("Author ID: {}", authorId);
+        log.debug("Author Object: {}", request.toString());
         return authorService.updateAuthor(authorId, request);
     }
 
     @DeleteMapping("/{authorId}")
     public void deleteBook (@PathVariable String authorId) {
+        log.debug("Author ID: {}", authorId);
         authorService.deleteAuthor(authorId);
     }
 
