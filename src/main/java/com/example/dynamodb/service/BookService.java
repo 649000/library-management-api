@@ -3,24 +3,28 @@ package com.example.dynamodb.service;
 import com.example.dynamodb.exception.EntityNotFoundException;
 import com.example.dynamodb.model.Author;
 import com.example.dynamodb.model.Book;
+import com.example.dynamodb.model.Mapper;
 import com.example.dynamodb.repository.AuthorRepository;
 import com.example.dynamodb.repository.BookRepository;
-import org.springframework.beans.BeanUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class BookService {
 
     private final BookRepository bookRepository;
     private final AuthorRepository authorRepository;
+    private final Mapper mapper;
 
     @Autowired
-    public BookService(BookRepository bookRepository, AuthorRepository authorRepository) {
+    public BookService(BookRepository bookRepository, AuthorRepository authorRepository, Mapper mapper) {
         this.bookRepository = bookRepository;
         this.authorRepository = authorRepository;
+        this.mapper = mapper;
     }
 
     public Book readBookById(String id) {
@@ -61,10 +65,9 @@ public class BookService {
         if (optionalBook.isEmpty()) {
             throw new EntityNotFoundException("Book Not Found");
         }
-        Book book = optionalBook.get();
-        book.setIsbn(request.getIsbn());
-        book.setName(request.getName());
-        book.setAuthorId(request.getAuthorId());
+
+        Book book = mapper.updateBook(request, optionalBook.get());
+        log.debug(book.toString());
         return bookRepository.save(book);
     }
 }

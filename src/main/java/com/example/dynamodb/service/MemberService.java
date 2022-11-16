@@ -1,6 +1,7 @@
 package com.example.dynamodb.service;
 
 import com.example.dynamodb.exception.EntityNotFoundException;
+import com.example.dynamodb.model.Mapper;
 import com.example.dynamodb.model.Member;
 import com.example.dynamodb.model.MemberStatus;
 import com.example.dynamodb.repository.MemberRepository;
@@ -14,9 +15,12 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    private final Mapper mapper;
+
     @Autowired
-    public MemberService(MemberRepository memberRepository) {
+    public MemberService(MemberRepository memberRepository, Mapper mapper) {
         this.memberRepository = memberRepository;
+        this.mapper = mapper;
     }
 
 
@@ -36,15 +40,14 @@ public class MemberService {
         }
         throw new EntityNotFoundException("Member Not Found");
     }
-    public Member updateMember (Member member) {
-        Optional<Member> optionalMember = memberRepository.findById(member.getId());
+    public Member updateMember (Member request) {
+        Optional<Member> optionalMember = memberRepository.findById(request.getId());
         if (optionalMember.isEmpty()) {
             throw new EntityNotFoundException("Member not present in the database");
         }
-        Member retrivedMember = optionalMember.get();
-        retrivedMember.setLastName(member.getLastName());
-        retrivedMember.setFirstName(member.getFirstName());
-        return memberRepository.save(retrivedMember);
+
+        Member member = mapper.updateMember(request, optionalMember.get());
+        return memberRepository.save(member);
     }
 
     public void deleteMember(final String memberId) {
