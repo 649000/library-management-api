@@ -53,4 +53,9 @@ public class LendService {
     public Iterable<Lend> getLends() {
         return lendRepository.findAll();
     }
+
+    public void deleteLend(String id) {
+        lendRepository.deleteById(id);
+    }
+
 }

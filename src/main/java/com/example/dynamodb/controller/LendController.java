@@ -30,4 +30,10 @@ public class LendController {
     public Iterable<Lend> getAllLends(){
         return lendService.getLends();
     }
+    @DeleteMapping("/{lendId}")
+    public ResponseEntity<Void> deleteLend (@PathVariable String lendId) {
+        log.debug("Lend ID: {}", lendId);
+        lendService.deleteLend(lendId);
+        return ResponseEntity.ok().build();
+    }
 }
