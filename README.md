@@ -31,6 +31,12 @@ export aws_accesskey=<KEY GOES HERE>
 export aws_secretkey=<KEY GOES HERE>
 ```
 
+To run the service, navigate to the root of the project and execute the command
+
+```
+mvn spring-boot:run
+```
+
 
 ## Endpoints
 |          | localhost                                   | Railway                                                     |
