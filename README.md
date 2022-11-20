@@ -22,6 +22,14 @@ This project has also been deployed onto Railway. Railway is an infrastructure p
 4. MapStruct 
 5. AWS Java SDK For Amazon DynamoDB
 
+## Running the project
+AWS Access and Secret keys are required and must be set as an environment variable to run this app
+
+Example on setting environment variable on macOS:
+```
+export aws_accesskey=<KEY GOES HERE>
+export aws_secretkey=<KEY GOES HERE>
+```
 
 
 ## Endpoints
