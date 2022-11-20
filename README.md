@@ -1,13 +1,22 @@
-# Spring Boot REST API with AWS DynamoDB
-Proof of concept for Spring Boot API with AWS DynamoDB
+# Spring Boot API with AWS DynamoDB
+## Overview
+This is a Spring Boot based RESTful API project connected to AWS DynamoDB. 
+The objective of this project are as follows:
+1. Familiarize with Java, Spring Boot, and Maven
+2. Utilise AWS DynamoDB in a Spring Boot project
+3. Build a RESTful API service
+4. 
+
 
 
 #### Technologies
 1. Spring Boot
    1. Spring Data DynamoDB
-2. SpringDoc OpenAPI
-3. Lombok
-4. Maven
+   2. SpringDoc OpenAPI
+   3. Spring Boot Actuator
+2. Lombok
+3. Maven
+4. MapStruct 
 5. AWS Java SDK For Amazon DynamoDB
 
 
@@ -16,8 +25,8 @@ Proof of concept for Spring Boot API with AWS DynamoDB
 
 |Feature|Status  |
 |--|--|
-|CRUD on models|Completed  |
-| Deployed on Heroku| Completed
+|CRUD functionalities|Completed  |
+| Deployed on Railway| Completed
 
 
 ## Reflection
