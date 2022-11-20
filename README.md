@@ -29,6 +29,12 @@ The objective of this project are as follows:
 | Deployed on Railway| Completed
 
 
+## Endpoints
+|          | localhost                                   | Railway                                                     |
+|----------|---------------------------------------------|-------------------------------------------------------------|
+| Open API | http://localhost:8080/swagger-ui/index.html | https://springboot-api.up.railway.app/swagger-ui/index.html |
+| Actuator | http://localhost:8080/actuator              | https://springboot-api.up.railway.app/actuator              |
+
 ## Reflection
 
 NoSQL database has become popular and simpler to use than relational database. This project aimed to familiarise with NoSQL database. Despite numerous NoSQL databases options out there, AWS DynamoDB was specifically chosen so that it aids my learning in taking the AWS certifications.
@@ -41,8 +47,3 @@ The challenging aspect of this project is having a different approach to databas
 2. Intellij IDE
 
 
-## Endpoints
-| localhost                                   | Railway                                                     |
-|---------------------------------------------|-------------------------------------------------------------|
-| http://localhost:8080/swagger-ui/index.html | https://springboot-api.up.railway.app/swagger-ui/index.html |
-| http://localhost:8080/actuator              | https://springboot-api.up.railway.app/actuator              |
