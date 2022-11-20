@@ -1,4 +1,5 @@
 # Spring Boot API service with AWS DynamoDB
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=649000_springboot-dynamodb-rest-api)
 ## Overview
 This is a Spring Boot RESTful API service connected to AWS DynamoDB.
 
