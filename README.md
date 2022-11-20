@@ -1,14 +1,15 @@
 # Spring Boot API service with AWS DynamoDB
 ## Overview
-This is a Spring Boot based RESTful API project connected to AWS DynamoDB. 
-The objective of this project are as follows:
+This is a Spring Boot RESTful API service connected to AWS DynamoDB.
+
+The objective of this project are:
 1. Familiarize with Java, Spring Boot, and Maven
 2. Utilise AWS DynamoDB in a Spring Boot project
 3. Build a RESTful API service
 
-
-
-#### Technologies
+## Features
+This API service mimics a library 
+### Technologies
 1. Spring Boot
    1. Spring Data DynamoDB
    2. SpringDoc OpenAPI
