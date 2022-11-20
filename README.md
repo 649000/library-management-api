@@ -10,6 +10,8 @@ The objective of this project are:
 ## Features
 This API service handles primary housekeeping functions of a library. It helps to manage literary assets and relationships with the library members. It also keeps track of books that have been checked out by the members.
 
+This project has also been deployed onto Railway. Railway is an infrastructure platform similar AWS. Railway was chosen because it provides free tier for hobbyist. 
+
 ### Technologies
 1. Spring Boot
    1. Spring Data DynamoDB
@@ -20,14 +22,6 @@ This API service handles primary housekeeping functions of a library. It helps t
 4. MapStruct 
 5. AWS Java SDK For Amazon DynamoDB
 
-
-## Project Status
-
-
-|Feature|Status  |
-|--|--|
-|CRUD functionalities|Completed  |
-| Deployed on Railway| Completed
 
 
 ## Endpoints
