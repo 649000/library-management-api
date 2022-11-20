@@ -1,4 +1,4 @@
-# Spring Boot API with AWS DynamoDB
+# Spring Boot API service with AWS DynamoDB
 ## Overview
 This is a Spring Boot based RESTful API project connected to AWS DynamoDB. 
 The objective of this project are as follows:
