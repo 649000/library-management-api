@@ -42,3 +42,7 @@ The challenging aspect of this project is having a different approach to databas
 
 
 ## Endpoints
+| localhost                                   | Railway                                                     |
+|---------------------------------------------|-------------------------------------------------------------|
+| http://localhost:8080/swagger-ui/index.html | https://springboot-api.up.railway.app/swagger-ui/index.html |
+| http://localhost:8080/actuator              | https://springboot-api.up.railway.app/actuator              |
