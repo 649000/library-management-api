@@ -5,7 +5,6 @@ The objective of this project are as follows:
 1. Familiarize with Java, Spring Boot, and Maven
 2. Utilise AWS DynamoDB in a Spring Boot project
 3. Build a RESTful API service
-4. 
 
 
 
