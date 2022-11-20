@@ -8,7 +8,7 @@ The objective of this project are:
 3. Build a RESTful API service
 
 ## Features
-This API service handles primary housekeeping functions of a library. It helps to manage literary assets as well as relationships with the library members. It also keeps track of books that have been checked out by the members.
+This API service handles primary housekeeping functions of a library. It helps to manage literary assets and relationships with the library members. It also keeps track of books that have been checked out by the members.
 
 ### Technologies
 1. Spring Boot
