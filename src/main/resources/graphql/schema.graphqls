@@ -1,0 +1,43 @@
+type Author {
+    id: ID!
+    firstName: String
+    lastName: String
+}
+
+type Book {
+    id: ID!
+    name: String
+    isbn: String
+    authorId: String!
+}
+
+type Member {
+    id: ID!
+    firstName: String
+    lastName: String
+    memberStatus: MemberStatus!
+}
+
+enum MemberStatus {
+    ACTIVE
+    DEACTIVATED
+}
+
+type Lend {
+    id: ID!
+    startOn: String
+    status: LendStatus!
+    dueOn: String
+    bookId: String!
+    memberId: String!
+}
+
+enum LendStatus {
+    AVAILABLE
+    BORROWED
+}
+
+
+type Query {
+    authors: [Author]
+}
