@@ -1,6 +1,8 @@
 package com.example.dynamodb.service;
 
 import com.example.dynamodb.exception.EntityNotFoundException;
+import com.example.dynamodb.exception.InactiveUserException;
+import com.example.dynamodb.exception.UnavailableBookException;
 import com.example.dynamodb.model.*;
 import com.example.dynamodb.repository.BookRepository;
 import com.example.dynamodb.repository.LendRepository;
@@ -33,7 +35,7 @@ public class LendService {
         }
         Member member = memberForId.get();
         if (member.getStatus() != MemberStatus.ACTIVE) {
-            throw new RuntimeException("User is not active to proceed a lending.");
+            throw new InactiveUserException("User is not active to proceed a lending.");
         }
 
         Optional<Book> bookForId = bookRepository.findById(request.getBookId());
@@ -48,7 +50,7 @@ public class LendService {
             request.setDueOn(Instant.now().plus(30, ChronoUnit.DAYS).toString());
             return lendRepository.save(request);
         }
-        throw new RuntimeException("Book is not available");
+        throw new UnavailableBookException("Book is not available");
     }
     public Iterable<Lend> getLends() {
         return lendRepository.findAll();
