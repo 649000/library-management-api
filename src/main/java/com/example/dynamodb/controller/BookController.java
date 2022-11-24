@@ -20,7 +20,7 @@ public class BookController {
     }
 
     @GetMapping
-    public ResponseEntity readBooks() {
+    public ResponseEntity<Iterable<Book>> readBooks() {
         return ResponseEntity.ok(bookService.readBooks());
     }
 
