@@ -46,3 +46,14 @@ type Query {
     members: [Member]
     member: Member
 }
+
+type Mutation {
+    createAuthor(input: AuthorInput): Author
+    updateAuthor(id: ID!, input: AuthorInput): Author
+    deleteAuthor(id: ID!): Author
+}
+
+input AuthorInput {
+    firstName: String
+    lastName: String
+}
