@@ -6,8 +6,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedEnum;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
 @Data
 @DynamoDBTable(tableName = "member")
 public class Member {
