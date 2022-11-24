@@ -42,14 +42,14 @@ public class AuthorController {
     }
 
     @PatchMapping("/{authorId}")
-    public Author updateBook (@PathVariable("authorId") String authorId, @RequestBody Author request) {
+    public Author updateAuthor (@PathVariable("authorId") String authorId, @RequestBody Author request) {
         log.debug("Author ID: {}", authorId);
         log.debug("Author Object: {}", request.toString());
         return authorService.updateAuthor(authorId, request);
     }
 
     @DeleteMapping("/{authorId}")
-    public void deleteBook (@PathVariable String authorId) {
+    public void deleteAuthor (@PathVariable String authorId) {
         log.debug("Author ID: {}", authorId);
         authorService.deleteAuthor(authorId);
     }
