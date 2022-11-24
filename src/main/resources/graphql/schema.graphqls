@@ -41,4 +41,8 @@ enum LendStatus {
 type Query {
     authors: [Author]
     author(id: ID): Author
+    books: [Book]
+    book: Book
+    members: [Member]
+    member: Member
 }
