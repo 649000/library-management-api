@@ -45,6 +45,8 @@ mvn spring-boot:run
 | Open API | http://localhost:8080/swagger-ui/index.html | https://springboot-api.up.railway.app/swagger-ui/index.html |
 | Actuator | http://localhost:8080/actuator              | https://springboot-api.up.railway.app/actuator              |
 
+Service on Railway may be down due to limited uptime hours provided.
+
 ## Reflection
 
 NoSQL database has become popular and simpler to use than relational database. This project aimed to familiarise with NoSQL database. Despite numerous NoSQL databases options out there, AWS DynamoDB was specifically chosen so that it aids my learning in taking the AWS certifications.
