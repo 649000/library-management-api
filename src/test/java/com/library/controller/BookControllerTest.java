@@ -25,6 +25,7 @@ public class BookControllerTest {
     private BookService service;
     @Test
     public void getBookById() throws Exception {
+        // Alternative implementation compared to AuthorController
         Book book = new Book();
         book.setId("649000");
         book.setName("12 Rules for Life");

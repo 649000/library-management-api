@@ -41,6 +41,7 @@ public class AuthorControllerTest {
 
     @Test
     public void getAuthors() throws Exception {
+        //Allow testing of HTTP status code and JSON response
         mockMvc.perform(MockMvcRequestBuilders
                 .get("/api/author")
                 .accept(MediaType.APPLICATION_JSON))
