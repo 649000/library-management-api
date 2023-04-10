@@ -20,9 +20,6 @@ public class AuthorControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Autowired
-    private AuthorController authorController;
-
     @Test
     public void getAuthors() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
