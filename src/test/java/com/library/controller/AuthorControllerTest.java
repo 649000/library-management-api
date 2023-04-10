@@ -1,7 +1,7 @@
 package com.library.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,6 +19,25 @@ public class AuthorControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @BeforeAll
+    static void setup() {
+        log.info("Startup - creating DB connection");
+    }
+    @BeforeEach
+    public void beforeEach() {
+        log.info("Before Each Class");
+    }
+
+    @AfterEach
+    public void afterEach() {
+        log.info("After Each Class");
+    }
+
+    @AfterAll
+    static void tearDown() {
+        log.info("Closing DB Connection");
+    }
 
     @Test
     public void getAuthors() throws Exception {
