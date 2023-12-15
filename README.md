@@ -1,29 +1,34 @@
-# Library Management API service with AWS DynamoDB
+# Library Management API Service
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=649000_springboot-dynamodb-rest-api)
-## Overview
-This is a Spring Boot RESTful API service connected to AWS DynamoDB.
 
-The objective of this project are:
-1. Familiarize with Java, Spring Boot, and Maven
-2. Utilise AWS DynamoDB in a Spring Boot project
-3. Build a RESTful API service
+## Overview
+This project entails a Spring Boot RESTful API service seamlessly integrated with AWS DynamoDB. Its primary focus is on efficient book management within a library ecosystem.
+
+## Objectives
+* Java, Spring Boot, and Maven Mastery: Familiarize oneself comprehensively with Java programming, Spring Boot framework, and Maven for robust application development.
+* Leveraging AWS DynamoDB within Spring Boot: Explore and utilize AWS DynamoDB's potential within a Spring Boot environment for effective data management.
+* Crafting a RESTful API Service: Build a powerful and user-friendly API service adept at managing a library's literary assets and member relationships.
 
 ## Features
-This API service handles primary housekeeping functions of a library. It helps to manage literary assets and relationships with the library members. It also keeps track of books that have been checked out by the members.
+This API service serves as the backbone for essential library functions, encompassing:
 
-This project has also been deployed onto Railway. Railway is an infrastructure platform similar AWS. Railway was chosen because it provides free tier for hobbyist. 
+* Management of Literary Assets: Facilitating the organization and oversight of books within the library.
+* Member Relationship Management: Tracking and managing relationships between the library and its members.
+* Efficient Book Checkout Tracking: Recording details of books checked out by library members.
+* Additionally, the project is hosted on Railway, a hobbyist-friendly infrastructure platform similar to AWS, chosen for its accommodating free-tier provision.
 
-### Technologies
-1. Spring Boot
-   1. Spring Data DynamoDB
-   2. SpringDoc OpenAPI
-   3. Spring Boot Actuator
-2. Lombok
-3. Maven
-4. MapStruct 
-5. AWS Java SDK For Amazon DynamoDB
 
-## Running the project
+## Technologies Utilized
+* Spring Boot: Empowering rapid API development.
+* Spring Data DynamoDB: Streamlining interactions with AWS DynamoDB for seamless data operations.
+* SpringDoc OpenAPI: Facilitating API documentation and interaction.
+* Spring Boot Actuator: Enabling efficient monitoring and management of the application.
+* Lombok: Reducing boilerplate code through annotations.
+* Maven: Orchestrating the project's build and dependencies.
+* MapStruct: Simplifying Java bean mappings.
+* AWS Java SDK For Amazon DynamoDB: Enabling smooth integration with DynamoDB using Java.
+
+## Installation and Setup Instructions
 AWS Access and Secret keys are required and must be set as an environment variable to run this app
 
 Example on setting environment variable on macOS:
@@ -49,13 +54,11 @@ Service on Railway may be down due to limited uptime hours provided.
 
 ## Reflection
 
-NoSQL database has become popular and simpler to use than relational database. This project aimed to familiarise with NoSQL database. Despite numerous NoSQL databases options out there, AWS DynamoDB was specifically chosen so that it aids my learning in taking the AWS certifications.
+This project serves a dual purpose: not only does it effectively manage library resources, but it also serves as a significant learning journey, delving into a spectrum of technologies vital for modern API development and infrastructure deployment.
 
-The challenging aspect of this project is having a different approach to database design. In relational database, designs have to take into account of relationships with the data and conform to normalisation rules. However, for NoSQL databases, it takes more of an application-centric approach, concerning with how the application will query data. 
+The rise of NoSQL databases has transformed the database landscape, offering simplicity and popularity that diverge from traditional relational databases. This project was conceived to familiarize myself with the nuances of NoSQL databases. While a myriad of NoSQL options exists, AWS DynamoDB was deliberately chosen to align with my pursuit of AWS certifications.
 
+The most intriguing challenge encountered during this project revolved around adopting a distinct approach to database design. Unlike the relational database paradigm, which emphasizes data relationships and normalization rules, NoSQL databases demand an application-centric approach. Here, the focus shifts towards optimizing data queries to suit the application's specific needs.
 
-#### Tools used
-1. Postman
-2. Intellij IDE
 
 
