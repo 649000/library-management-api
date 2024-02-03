@@ -1,5 +1,5 @@
 HELP.md
-!target/*.jar
+#!target/*.jar
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
@@ -26,8 +26,8 @@ HELP.md
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
+
+.DS_Store
