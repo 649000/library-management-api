@@ -45,12 +45,13 @@ mvn spring-boot:run
 
 
 ## Endpoints
-|          | localhost                                   | Railway                                                     |
+|          | localhost                                   | Render                                                     |
 |----------|---------------------------------------------|-------------------------------------------------------------|
-| Open API | http://localhost:8080/swagger-ui/index.html | https://springboot-api.up.railway.app/swagger-ui/index.html |
-| Actuator | http://localhost:8080/actuator              | https://springboot-api.up.railway.app/actuator              |
+| Open API | http://localhost:8080/swagger-ui/index.html | https://library-management-api-7c4u.onrender.com/swagger-ui/index.html |
+| Actuator | http://localhost:8080/actuator              | https://library-management-api-7c4u.onrender.com/actuator              |
+| API      | http://localhost:8080/api                   | https://library-management-api-7c4u.onrender.com/api              |
 
-Service on Railway may be down due to limited uptime hours provided.
+Service on Render may spin down due to inactivity, resulting in delays of 50 seconds or more for requests.
 
 ## Reflection
 
